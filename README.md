@@ -40,30 +40,30 @@ MARKET_COMMANDS['sellimit'] would be:
 So these string substitions are very useful as a reusable template.
 
 #If it doesn't work, go to the bittrex documentation.
-##api reference
-PUBLIC_COMMANDS = '''{
-    "getmarkets": null,
-    "getcurrencies": null,
-    "getticker": null,
-    "getmarketsummaries": "market",
-    "getorderbook": [ "market","type","depth" ],
-    "getmarkethistory": "market"
-}'''
 
-MARKET_COMMANDS = '''{
-    "buylimit": [ "market", "quantity", "rate" ],
-    "sellimit": [ "market", "quantity", "rate" ],
-    "cancel": [ "market", "quantity", "rate" ] ,
-    "getopenorders": [ "market" ]
-}'''
+    PUBLIC_COMMANDS = '''{
+        "getmarkets": null,
+        "getcurrencies": null,
+        "getticker": null,
+        "getmarketsummaries": "market",
+        "getorderbook": [ "market","type","depth" ],
+        "getmarkethistory": "market"
+    }'''
 
-ACCOUNT_COMMANDS = '''{
-    "getbalances": null,
-    "getbalance": "currency",
-    "getdepositaddress": "currency",
-    "withdraw": [ "currency", "quantity", "address", "paymentid" ]
-    "getorder": "uuid",
-    "getorderhistory": "market",
-    "getwithdrawalhistory": "currency",
-    "getdeposithistory": "currency"
-}'''
+    MARKET_COMMANDS = '''{
+        "buylimit": [ "market", "quantity", "rate" ],
+        "sellimit": [ "market", "quantity", "rate" ],
+        "cancel": [ "market", "quantity", "rate" ] ,
+        "getopenorders": [ "market" ]
+    }'''
+
+    ACCOUNT_COMMANDS = '''{
+        "getbalances": null,
+        "getbalance": "currency",
+        "getdepositaddress": "currency",
+        "withdraw": [ "currency", "quantity", "address", "paymentid" ]
+        "getorder": "uuid",
+        "getorderhistory": "market",
+        "getwithdrawalhistory": "currency",
+        "getdeposithistory": "currency"
+    }'''
