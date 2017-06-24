@@ -28,14 +28,16 @@ Below is the API reference I used to prevent constantly switching windows.
 I postfixed _COMMANDS but /public/, /market/ and /account/ are the first part of the uri you have to build.
 A null value is something you can query right away and the others need to have string substituion.  So here are two examples.
 
-ACCOUNT_COMMANDS['getbalances']:
+ACCOUNT_COMMANDS['getbalances'] would be:
+
     balances = nonce('/account/getbalances')
 
-MARKET_COMMANDS['sellimit']
+MARKET_COMMANDS['sellimit'] would be:
+
     sellorder = nonce('/market/selllimit?market={0}&quantity={1}&rate={2}')
     panicsell = sellorder.format('btc-eth', ethquantity, marketbid)
 
-So these string substitions are very useful as a template.
+So these string substitions are very useful as a reusable template.
 
 #If it doesn't work, go to the bittrex documentation.
 ##api reference
