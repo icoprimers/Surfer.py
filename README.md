@@ -6,11 +6,12 @@ Yeah you've opened the readme so that shows some commitment to try this script o
 
 Lets say we want to get the balance of our BTC wallet:
 
-Step 1: put the uri of the api function you want IN THIS NONCE FUNCTION and assign it to a variable. 
-The values however you leave for string substitution so you can keep reusing it. 
-This nonce function adds the nonce to the uri so that's taken care of.
+Step 1: assign the uri of the api function you want to a variable.  The values however you leave for string substitution ({0} {1} etc) so you can keep reusing it with .format().
 
-    balance = '/account/getbalance?currency={0}')   
+
+    balance = '/account/getbalance?currency={0}'  
+    print(balance.format('btc')
+    print(btrequest(balance.format('btc')))
 
 Step 2: Use this btrequest function and string substitute the uri variable with the desired value. This returns a parsed json result like this:
     
