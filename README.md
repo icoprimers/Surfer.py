@@ -48,7 +48,7 @@ A null value is something you can query right away and the others need to have s
         sellorder = '/market/selllimit?market={0}&quantity={1}&rate={2}'    
         result = btrequest(sellorder.format('btc-eth', 10, 0.1))
     
-You can decide for yourself to create a panicsell variable for btrequest,  or call the btrequest function right away. So these string substitions are practical templates that can be used in different places. If it doesn't work, go to the bittrex documentation. Below is reference.
+You can decide for yourself to create a panicsell variable for btrequest,  or call the btrequest function right away. So these string substitions are practical templates that can be used in different places. If it doesn't work, go to the bittrex documentation https://www.bittrex.com/Home/Api. Below is reference.
 
     PUBLIC_COMMANDS = '''{
         "getmarkets": null,
