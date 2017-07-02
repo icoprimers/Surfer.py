@@ -35,12 +35,18 @@ A null value is something you can query right away and the others need to have s
         balances = btrequest('/account/getbalances')
 
     MARKET_COMMANDS['sellimit'] would be:
-        sellorder = '/market/selllimit?market={0}&quantity={1}&rate={2}'
-        result = btrequest(sellorder.format('btc-eth', ethquantity, marketbid))
     
-    You can also create panicsell orders first ofcourse and pass those through btrequest.
-        panicsellorder = sellorder.format('btc-eth', ethquantity, marketbid)
+    in a single command:
+        sellorder = btrequest('/market/selllimit?market=btc-eth&quantity=10&rate=0.1')
+        
+    with string substitution in a second variable:
+        sellorder = '/market/selllimit?market={0}&quantity={1}&rate={2}'
+        panicsellorder = sellorder.format('btc-eth', 10, 0.1)
         result = btrequest(panicsellorder)
+        
+    with string substition the function:
+        sellorder = '/market/selllimit?market={0}&quantity={1}&rate={2}'    
+        result = btrequest(sellorder.format('btc-eth', 10, 0.1))
     
 You can decide for yourself to create a panicsell variable for btrequest,  or call the btrequest function right away. So these string substitions are practical templates that can be used in different places. If it doesn't work, go to the bittrex documentation. Below is reference.
 
