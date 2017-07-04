@@ -1,4 +1,4 @@
-# Surfer.py
+# btrequest.py
 
 Yeah you've opened the readme so that shows some commitment to try this script out. Take a deep breath before we dive in the whole framework.  Here's a list of all the functions:
 
